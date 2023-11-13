@@ -19,66 +19,60 @@ body{
 }
 
 /*NAVBAR*/
-.inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#top-nav{
+  display: flex;
+  font-family: "Montreal";
+  font-weight: bold;
+  justify-content: space-between;
 }
 
-.header-logo {
-    font-weight: bold;
-    display: flex;
+#top-nav a {
+  display: flex;
+  width: 160px;
+  height: 30px;
+  padding: 1px 0px 2.38px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 6.8px;
+  color: black;
+  outline: none;
+  text-decoration: none;
 }
 
-.barre1 {
-    display: block;
-    width: 2%;
-    height: 1.5px;
-    background-color: black;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin: auto 6px auto 6px;
+#buttonNav {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.navbutton {
-    background: none;
-    border: none;
-    cursor: pointer;
+.emdash{
+  width: 27px;
+  height: 1.5px;
+  background-color: black;
 }
 
-.menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+#menu {
+  display: none;
+  /* position: absolute; */
+  background: transparent;
+  list-style: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 200px;
 }
 
-.menu a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+#menu li {
+  padding: 10px;
+  font-size: 5rem;
 }
 
-.menu a:hover {
-    background-color: #ddd;
+#menu li a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 60px;
 }
 
-
-
-h1{
-    font-family: "DAVINCI";
-    font-size: 7rem;
-}
-
-.barre2{
-    display: block; 
-    width: 25%; 
-    height: 22px; 
-    background-color: black;
-    margin-top: 100px;
-    margin-bottom: 100px;
+#menu.show {
+  display: block;
 }
