@@ -1,4 +1,55 @@
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const loaderWrapper = document.querySelector(".loader-wrapper");
+  const preloaderCounters = document.querySelectorAll(".preloader_counter");
+  
+
+  // Durée approximative du chargement en millisecondes
+  const loadingDuration = 1500;
+
+  const updateInterval = 15; // Intervalle de mise à jour du compteur (en millisecondes)
+
+  // Fonction pour mettre à jour le compteur
+  const updateCounter = (counter, delay) => {
+      let currentTime = 0;
+      let currentValue = 0;
+
+      // Calculez l'incrémentation en fonction de l'intervalle de mise à jour
+      const increment = 100 / (loadingDuration / updateInterval);
+
+      // Attendez le délai spécifié avant de commencer le compteur
+      setTimeout(() => {
+          const update = () => {
+              if (currentValue < 100) {
+                  currentValue += increment;
+                  counter.textContent = Math.round(currentValue);
+                  requestAnimationFrame(update);
+              }
+          };
+
+          requestAnimationFrame(update);
+      }, delay);
+  };
+
+  preloaderCounters.forEach((counter) => {
+      const delay = parseInt(counter.getAttribute("data-delay"));
+      updateCounter(counter, delay);
+  });
+
+  // Masquez l'écran de chargement après la fin du chargement
+  setTimeout(function() {
+      loaderWrapper.style.display = "none";
+  }, loadingDuration);
+});
+
+
+
+
+
+
+
+//Navbar rotation
 var rotation = 0;
 var targetRotation = 0;
 var rotationStep = 2; // La vitesse de rotation
@@ -23,6 +74,7 @@ var animateRotation = function() {
   }
 };
 
+//Affiche navbar
 var myButton = document.getElementById("buttonNav");
 var menu = document.getElementById("menu");
 
