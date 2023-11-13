@@ -1,0 +1,84 @@
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "DAVINCI";
+    src: url("Fonts/Davinci.ttf");
+}
+
+@font-face {
+    font-family: "Montreal";
+    src: url("Fonts/NeueMontreal-Regular.otf");
+}
+
+body{
+    font-family: "Montreal";
+}
+
+/*NAVBAR*/
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-weight: bold;
+    display: flex;
+}
+
+.barre1 {
+    display: block;
+    width: 2%;
+    height: 1.5px;
+    background-color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin: auto 6px auto 6px;
+}
+
+.navbutton {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+
+
+h1{
+    font-family: "DAVINCI";
+    font-size: 7rem;
+}
+
+.barre2{
+    display: block; 
+    width: 25%; 
+    height: 22px; 
+    background-color: black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
