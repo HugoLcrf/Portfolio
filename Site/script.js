@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
   // Durée approximative du chargement en millisecondes
-  const loadingDuration = 1500;
+  const loadingDuration = 3000;
 
-  const updateInterval = 15; // Intervalle de mise à jour du compteur (en millisecondes)
+  const updateInterval = 30; // Intervalle de mise à jour du compteur (en millisecondes)
 
   // Fonction pour mettre à jour le compteur
   const updateCounter = (counter, delay) => {
@@ -89,5 +89,27 @@ myButton.addEventListener("click", function() {
     menu.style.display = "flex";
   }
 });
+
+//ASSOMBRIRE LA PAGE AU Scroll
+
+document.addEventListener("DOMContentLoaded", function () {
+  var overlay = document.getElementById("overlay");
+
+  window.addEventListener("scroll", function () {
+    var scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+    // Réglez le pourcentage de défilement à partir duquel l'overlay doit être activé
+    var activationThreshold = 20;
+
+    if (scrollPercentage > activationThreshold) {
+      overlay.style.display = "block";
+      document.body.classList.add("overlay-active");
+    } else {
+      overlay.style.display = "none";
+      document.body.classList.remove("overlay-active");
+    }
+  });
+});
+
 
 
