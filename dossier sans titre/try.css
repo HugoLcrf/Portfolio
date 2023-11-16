@@ -1,0 +1,45 @@
+body{
+    height: 200vh;
+}
+
+.item{
+    width: 600px;
+    height: 600px;
+}
+
+.media{
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+#carousel {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+}
+
+.item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+    border-bottom: 1px solid hsla(0,0%,5%,.25);
+    border-top: 1px solid hsla(0,0%,5%,.25);
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.item ::after{
+    content: "";
+    width: 1px;
+    min-height: 100%;
+    right: -15px;
+    top: 0;
+    position: absolute;
+    background: hsla(0,0%,5%,.25);
+}
+
