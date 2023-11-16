@@ -14,8 +14,21 @@
     src: url("Fonts/NeueMontreal-Regular.otf");
 }
 
-body{
-    font-family: "Montreal";
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  z-index: -2;
+  
+}
+
+body {
+  font-family: "Montreal";
+  transition: mix-blend-mode 0.5s; /* Pour une transition en douceur */
+  height: 100%;
+  background-color: #fff;
+
 }
 
 #overlay {
@@ -25,11 +38,29 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Réglez l'opacité ici */
-  transition: opacity 0.5s ease; /* Ajoutez une transition pour un effet plus doux */
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.5s ease;
   z-index: -1;
 }
 
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.3s;
+  z-index: 1000;
+}
+
+/* appliquer mix-blend-mode: difference; au body */
+body.difference {
+  mix-blend-mode: difference;
+}
 
 /*Ecran de chargement*/
 .loader-wrapper {
@@ -79,6 +110,11 @@ body{
   }
 
 /*NAVBAR*/
+
+header{
+  display: flex;
+  justify-content: space-between;
+}
 
 #top-nav{
   display: flex;
@@ -146,6 +182,16 @@ body{
   25% { transform: scale(0.9, 1.1); }
   50% { transform: scale(1.1, 0.9); }
   75% { transform: scale(0.95, 1.05); }
+}
+
+/*Bottom navbar*/
+
+#bottom-nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
 }
 
 /*Homepage Section 1 */

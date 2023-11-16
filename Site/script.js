@@ -111,5 +111,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//CURSOR
+
+document.addEventListener('mousemove', (e) => {
+  const cursor = document.querySelector('.cursor');
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+
+// Récupérer le bouton et le corps du document
+const changeBlendModeButton = document.getElementById('changeBlendMode');
+const body = document.body;
+
+// Fonction pour ajouter ou supprimer la classe avec mix-blend-mode
+function toggleBlendMode() {
+  // Ajouter ou supprimer la classe "difference" au body
+  body.classList.toggle('difference');
+}
+
+// Ajouter un écouteur d'événements pour le clic sur le bouton
+changeBlendModeButton.addEventListener('click', toggleBlendMode);
+
 
 
