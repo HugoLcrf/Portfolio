@@ -1,3 +1,4 @@
+AOS.init();
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -132,4 +133,10 @@ function toggleBlendMode() {
 changeBlendModeButton.addEventListener('click', toggleBlendMode);
 
 
-
+window.addEventListener('scroll', function() {
+  // Si le bas de la page est atteint
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      // Défilez vers le haut
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});

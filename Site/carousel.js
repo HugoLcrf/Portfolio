@@ -19,9 +19,8 @@ document.getElementById("carousel").addEventListener('wheel', function(event) {
 
     // Vérifier si le défilement horizontal atteint les limites
     if (this.scrollLeft + this.clientWidth >= this.scrollWidth) {
-      // Si oui, permettre le défilement vertical
-      this.removeEventListener('wheel', handleHorizontalScroll);
-      this.addEventListener('wheel', handleVerticalScroll);
+      // Si oui, passer à la section suivante
+      document.getElementById("Bottom").scrollIntoView({ behavior: 'smooth' });
     }
   }
 });
@@ -31,36 +30,29 @@ function handleHorizontalScroll(event) {
 }
 
 function handleVerticalScroll(event) {
-  document.getElementById("nextSection").scrollIntoView({ behavior: 'smooth' });
+  document.getElementById("Bottom").scrollIntoView({ behavior: 'smooth' });
 }
 
 
 //  Contenue a droite
 
-var drawerWrapper = document.getElementById('drawer-wrapper');
-
-document.addEventListener('click', function (event) {
-  // Vérifier si le clic n'est pas à l'intérieur de drawer-wrapper et si la div est visible
-  if (!drawerWrapper.contains(event.target) && !drawerWrapper.classList.contains('visible')) {
-    // Afficher la classe .visible au premier clic
-    drawerWrapper.classList.add('visible');
-  }
-});
-
 function showContent(contentId) {
   // Masquer tous les contenus
   var contents = document.querySelectorAll('.content');
   contents.forEach(function (content) {
-    content.style.display = 'none';
+      content.style.display = 'none';
   });
 
   // Afficher le contenu spécifique
   document.getElementById(contentId).style.display = 'block';
+
+  // Afficher le volet à droite
+  document.getElementById('drawer-wrapper').classList.add('visible');
 }
 
 function closeDrawer() {
   // Cacher le volet à droite
-  drawerWrapper.classList.remove('visible');
+  document.getElementById('drawer-wrapper').classList.remove('visible');
 }
 
 
