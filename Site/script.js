@@ -132,11 +132,36 @@ function toggleBlendMode() {
 // Ajouter un écouteur d'événements pour le clic sur le bouton
 changeBlendModeButton.addEventListener('click', toggleBlendMode);
 
+//Deroulement infinit
 
+// Hauteur des pixels en haut et en bas que vous souhaitez ajouter
+const pixelHeightTop = 1;
+const pixelHeightBottom = 1;
+
+// Gestionnaire d'événements de défilement
 window.addEventListener('scroll', function() {
-  // Si le bas de la page est atteint
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-      // Défilez vers le haut
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+    // // Vérifiez si l'utilisateur a atteint le pixel en haut
+    // if (window.scrollY <= pixelHeightTop) {
+    //     // Exécutez window.scrollTo(0, document.body.offsetHeight) dans la console
+    //     console.log('Touché le pixel en haut. Exécution de window.scrollTo(0, document.body.offsetHeight) dans la console.');
+    //     window.scrollTo(0, document.body.offsetHeight);
+    // }
+
+    // Vérifiez si l'utilisateur a atteint le bas de la page
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        // Exécutez window.scrollTo(0, 0) dans la console
+        console.log('Arrivé à la fin de la page. Exécution de window.scrollTo(0, 0) dans la console.');
+        window.scrollTo(0, 0);
+    }
 });
+
+
+
+
+
+
+
+
+
+
+
