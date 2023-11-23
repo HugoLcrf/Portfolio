@@ -75,8 +75,8 @@ body.difference {
   grid-template-columns: repeat(13, 1fr); /* 13 colonnes en largeur */
   grid-template-rows: repeat(6, 1fr); /* 8 lignes en hauteur */
   color: #fff;
-  animation: zoomIn 2s forwards; /* Utilisez l'animation zoomIn pendant 2 secondes */
-  z-index: 10;
+  /* animation: zoomIn 2s forwards; Utilisez l'animation zoomIn pendant 2 secondes */
+  z-index: 100;
 }
 
 @keyframes zoomIn {
@@ -111,25 +111,23 @@ body.difference {
 
 /*NAVBAR*/
 
-header{
+header {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100%;
   position: fixed;
+  z-index: 2;
 }
 
-
-#top-nav{
+#top-nav {
   display: flex;
   font-family: "Montreal";
   font-weight: bold;
   justify-content: space-between;
-  align-items: flex-start; /* Ajustez cette ligne pour placer le top-nav en haut */
-
 }
 
-#nav{
+#nav {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -164,7 +162,6 @@ header{
 
 #menu {
   display: none;
-  /* position: absolute; */
   background: transparent;
   list-style: none;
   flex-direction: column;
@@ -254,26 +251,26 @@ header{
 
 #TXT{
   width: 100%;
-  z-index: 10;
+  margin: 100px 0px 230px 15px;
 }
 
 #TXT p {
-  font-size: 3.25rem;
+  font-size: 3.5rem;
   line-height: 1;
   letter-spacing: -.03em;
   color: white;
-  width: 80%;
-  font-weight: lighter;
-  margin: 70px;
+  width: 90%;
 }
 
 /*Carousel*/
 
 .item{
-  width: 600px;
+  width: 48%;
   height: 85vh;
   cursor: pointer;
   color: white;
+  z-index: 11;
+  font-family: 'DAVINCI';
 }
 
 .drawer-wrapper {
@@ -286,12 +283,13 @@ header{
   position: fixed;
   background-color: white;
   color: black;
-  z-index: 10;
+  z-index: 13;
 }
 
 .visible {
-  width: 300px; /* Ajustez la largeur selon vos besoins */
+  width: 40%; /* Ajustez la largeur selon vos besoins */
   height: 100vh;
+  z-index: 13 ;
 }
 
 .media{
@@ -304,6 +302,7 @@ header{
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
+
 
 .ViewAll .media{
   margin-top: 80px;
@@ -354,7 +353,6 @@ header{
   width: 1px;
   min-height: 100%;
   background: hsla(0, 0%, 70%, 0.25);
-  z-index: 10;
   position: absolute;
   top: 0;
   right: -15px;

@@ -91,6 +91,33 @@ myButton.addEventListener("click", function() {
   }
 });
 
+//POSITIONNEMENT NAVBAR AVEC ANIMATION AU SCROLL
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+  let st = window.pageYOffset || document.documentElement.scrollTop;
+  const firstALink = document.querySelector("#top-nav a");
+  const buttonNav = document.querySelector("#buttonNav");
+  const firstButton = document.querySelector("#bottom-nav button:first-child");
+  const secondButton = document.querySelector("#bottom-nav button:nth-child(2)");
+
+  if (st > lastScrollTop) {
+    //Défiler vers le bas
+    firstALink.style.transform = "translateY(-110%) translateX(-50%)";
+    buttonNav.style.transform = "translateY(-110%) translateX(100%)";
+    firstButton.style.transform = "translateY(110%) translateX(-150%)";
+    secondButton.style.transform = "translateY(160%) translateX(100%)";
+  } else {
+    //Défiler vers le haut
+    firstALink.style.transform = "translateY(0)";
+    buttonNav.style.transform = "translateY(0)";
+    firstButton.style.transform = "translateY(0)";
+    secondButton.style.transform = "translateY(0)";
+  }
+
+  lastScrollTop = st <= 0 ? 0 : st;
+});
+
 //ASSOMBRIRE LA PAGE AU Scroll
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -135,18 +162,10 @@ changeBlendModeButton.addEventListener('click', toggleBlendMode);
 //Deroulement infinit
 
 // Hauteur des pixels en haut et en bas que vous souhaitez ajouter
-const pixelHeightTop = 1;
 const pixelHeightBottom = 1;
 
 // Gestionnaire d'événements de défilement
 window.addEventListener('scroll', function() {
-    // // Vérifiez si l'utilisateur a atteint le pixel en haut
-    // if (window.scrollY <= pixelHeightTop) {
-    //     // Exécutez window.scrollTo(0, document.body.offsetHeight) dans la console
-    //     console.log('Touché le pixel en haut. Exécution de window.scrollTo(0, document.body.offsetHeight) dans la console.');
-    //     window.scrollTo(0, document.body.offsetHeight);
-    // }
-
     // Vérifiez si l'utilisateur a atteint le bas de la page
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         // Exécutez window.scrollTo(0, 0) dans la console
@@ -154,6 +173,9 @@ window.addEventListener('scroll', function() {
         window.scrollTo(0, 0);
     }
 });
+
+
+
 
 
 
