@@ -264,34 +264,6 @@ header {
 
 /*Carousel*/
 
-.item{
-  width: 48%;
-  height: 85vh;
-  cursor: pointer;
-  color: white;
-  z-index: 11;
-  font-family: 'DAVINCI';
-}
-
-.drawer-wrapper {
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 100vh;
-  overflow: hidden;
-  transition: width 0.3s ease;
-  position: fixed;
-  background-color: white;
-  color: black;
-  z-index: 13;
-}
-
-.visible {
-  width: 40%; /* Ajustez la largeur selon vos besoins */
-  height: 100vh;
-  z-index: 13 ;
-}
-
 .media{
   height: 60vh;
   width: 100%;
@@ -303,35 +275,6 @@ header {
   transform: translateZ(0);
 }
 
-
-.ViewAll .media{
-  margin-top: 80px;
-  background: transparent;
-  border: 1px solid hsla(0, 0%, 70%, .25);
-    width: 100%;
-    font-size: 30px;
-    line-height: 1;
-    color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    gap: 7px;
-}
-
-.ViewAll svg{
-    width: 20px;
-    position: relative;
-    top: -6px;
-    margin-left: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    fill: white;
-}
-
 #carousel {
   display: flex;
   overflow: auto;
@@ -339,8 +282,13 @@ header {
 }
 
 .item {
+  width: 48%;
+  height: 85vh;
+  cursor: pointer;
+  color: white;
+  z-index: 11;
+  font-family: 'DAVINCI';
   flex: 0 0 auto;
-  scroll-snap-align: start;
   border-bottom: 1px solid hsla(0, 0%, 70%, .25);
   border-top: 1px solid hsla(0, 0%, 70%, .25);
   margin-right: 15px;
@@ -375,6 +323,127 @@ header {
   justify-content: center;
   align-items: center; 
 }
+
+.ViewAll .media{
+  margin-top: 80px;
+  background: transparent;
+  border: 1px solid hsla(0, 0%, 70%, .25);
+    width: 100%;
+    font-size: 30px;
+    line-height: 1;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    gap: 7px;
+}
+
+.ViewAll svg{
+    width: 20px;
+    position: relative;
+    top: -6px;
+    margin-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    fill: white;
+}
+
+/* PopUp Carrousel */
+
+.drawer-wrapper {
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  position: fixed;
+  background-color: white;
+  color: black;
+  z-index: 13;
+  overflow-y: auto;
+}
+
+#close {
+  position: absolute;
+  width: auto;
+  top: 2.5vw;
+  right: 2vw;
+  width: 1vw;
+  height: 1vh;
+}
+
+.inner {
+  max-height: 100%;
+  display: flex;
+}
+
+.header-wrapper{
+  display: flex;
+  padding-top: 5vh;
+  padding-left: 2vw;
+  font-size: 3rem;
+}
+
+.work-link{
+  color: black;
+}
+
+.tiles{
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.media-wrapper{
+  height: 100%;
+}
+
+.media-wrapper .media{
+  height: 50vh;
+  width: 100%;
+  border-radius: 1vw;
+}
+
+.copy-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: -30px 2vw 4vw 2vw;
+}
+
+.tile{
+position: relative;
+width: 100%;
+background: black;
+display: flex;
+align-items: center;
+padding-left: 4.5vw;
+height: 25vw;
+}
+
+.tile p {
+  font-family: "DAVINCI",sans-serif;
+    font-size: 4vw;
+    line-height: .9;
+    letter-spacing: -.03em;
+    text-decoration-line: underline;
+    color: white;
+}
+
+.visible {
+  width: 45%;
+  height: 100vh;
+  z-index: 13 ;
+}
+
+
+
+
+
 
 /*nextsection*/
 
