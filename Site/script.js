@@ -46,14 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
-
 //Navbar rotation
 var rotation = 0;
 var targetRotation = 0;
-var rotationStep = 2; // La vitesse de rotation
+var rotationStep = 2;
 
 var rotate = function(element, degree) {
   var bbox = element.getBBox();
@@ -78,6 +74,7 @@ var animateRotation = function() {
 //Affiche navbar
 var myButton = document.getElementById("buttonNav");
 var menu = document.getElementById("menu");
+var sectionsToHide = ["Homepage", "carousel", "TXT","Bottom","Boucle"];
 
 myButton.addEventListener("click", function() {
   targetRotation += 135; // Rotation cible à 60 degrés de plus
@@ -86,10 +83,34 @@ myButton.addEventListener("click", function() {
   // Afficher ou masquer le menu
   if (menu.style.display === "flex") {
     menu.style.display = "none";
+    showSections(); // Affiche toutes les sections
   } else {
     menu.style.display = "flex";
+    hideSections(); // Masque toutes les sections
   }
 });
+
+function hideSections() {
+  sectionsToHide.forEach(function(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+      section.style.display = "none";
+      section.classList.remove("fade-in-down");
+
+    }
+  });
+}
+
+function showSections() {
+  sectionsToHide.forEach(function(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+      section.style.display = "flex";
+      section.classList.add("fade-in-down");
+    }
+  });
+}
+
 
 //POSITIONNEMENT NAVBAR AVEC ANIMATION AU SCROLL
 let lastScrollTop = 0;
@@ -150,26 +171,22 @@ document.addEventListener('mousemove', (e) => {
 const changeBlendModeButton = document.getElementById('changeBlendMode');
 const body = document.body;
 
-// Fonction pour ajouter ou supprimer la classe avec mix-blend-mode
 function toggleBlendMode() {
-  // Ajouter ou supprimer la classe "difference" au body
   body.classList.toggle('difference');
 }
 
 // Ajouter un écouteur d'événements pour le clic sur le bouton
 changeBlendModeButton.addEventListener('click', toggleBlendMode);
 
+
 //Deroulement infinit
 
-// Hauteur des pixels en haut et en bas que vous souhaitez ajouter
 const pixelHeightBottom = 1;
 
 // Gestionnaire d'événements de défilement
 window.addEventListener('scroll', function() {
     // Vérifiez si l'utilisateur a atteint le bas de la page
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        // Exécutez window.scrollTo(0, 0) dans la console
-        console.log('Arrivé à la fin de la page. Exécution de window.scrollTo(0, 0) dans la console.');
         window.scrollTo(0, 0);
     }
 });
