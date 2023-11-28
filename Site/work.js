@@ -28,7 +28,7 @@ var animateRotation = function() {
 //Affiche navbar
 var myButton = document.getElementById("buttonNav");
 var menu = document.getElementById("menu");
-var sectionsToHide = ["work-section"];
+var sectionsToHide = ["work-section","contact-section","Bottom"];
 
 myButton.addEventListener("click", function() {
   targetRotation += 135; // Rotation cible à 60 degrés de plus
@@ -58,9 +58,12 @@ function showSections() {
   sectionsToHide.forEach(function(sectionId) {
     var section = document.getElementById(sectionId);
     if (section) {
-      section.style.display = "block";
+      if (sectionId === "Bottom") {
+        section.style.display = "flex";
+      } else {
+        section.style.display = "block";
+      }
       section.classList.add("fade-in-down");
-
     }
   });
 }
@@ -111,3 +114,29 @@ document.addEventListener('mousemove', (e) => {
   
   // Ajouter un écouteur d'événements pour le clic sur le bouton
   changeBlendModeButton.addEventListener('click', toggleBlendMode);
+
+
+  //ABOUT PAGE //
+
+  let mail = document.getElementById("mail");
+
+  mail.addEventListener('click', () => {
+
+    let tempTextarea = document.createElement('textarea');
+    // Assigner la valeur du texte que vous voulez copier
+    tempTextarea.value = "lecerf.hugo04@gmail.com";
+    // Ajouter l'élément au DOM
+    document.body.appendChild(tempTextarea);
+    // Sélectionner le texte dans l'élément
+    tempTextarea.select();
+    // Exécuter la commande de copie
+    document.execCommand('copy');
+    // Supprimer l'élément temporaire du DOM
+    document.body.removeChild(tempTextarea);
+    
+    // Mettre à jour le texte du lien
+    mail.innerText = "Email copied !";
+    setTimeout(() => {
+      mail.innerText = "Email";
+    }, 2000);
+  });  

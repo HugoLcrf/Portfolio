@@ -58,7 +58,7 @@ body {
 
 /* appliquer mix-blend-mode: difference; au body */
 body.difference {
-  background-color: #fff;
+  background-color: #5a0075;
   mix-blend-mode: difference;
 }
 
@@ -468,9 +468,6 @@ height: 25vw;
 
 
 
-
-
-
 /*nextsection*/
 
 #Bottom{
@@ -539,8 +536,9 @@ footer{
 
 
 
-
 /* WORK PAGE */
+
+
 #work-section {
   color: #fff;
   padding-top: 100px;
@@ -594,8 +592,53 @@ footer{
   .work-project {
     flex: 0 0 calc(100%);
 }
-
 }
 
+/* ABOUT PAGE */
 
+#contact-section{
+  color: white;
+  padding-top: 100px;
+}
+
+#contact-header{
+  width: 100%;
+  line-height: normal;
+  letter-spacing: -.375vw;
+  font-size: 8vw;
+  display: flex;
+  font-family: "DAVINCI";
+}
+
+#contact-content{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#contact-content a{
+  width: calc(50% - 15px);
+  border-top: 2px solid hsla(0, 0%, 70%, .25);
+  font-size: 5rem;
+  font-weight: 100;
+  color: white;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  text-decoration: none;
+  z-index: 3;
+}
+
+@media screen and ( max-width: 767px){
+  #contact-content a {
+    width: 100%;
+    line-height: normal;
+  }
+
+  #contact-header{
+    line-height: normal;
+    letter-spacing: -.375vw;
+    font-size: 70px;
+  }
+}
 
