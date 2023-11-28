@@ -28,7 +28,7 @@ var animateRotation = function() {
 //Affiche navbar
 var myButton = document.getElementById("buttonNav");
 var menu = document.getElementById("menu");
-var sectionsToHide = ["work-section","contact-section","Bottom"];
+var sectionsToHide = ["work-section","contact-section","Bottom","about-section"];
 
 myButton.addEventListener("click", function() {
   targetRotation += 135; // Rotation cible à 60 degrés de plus
