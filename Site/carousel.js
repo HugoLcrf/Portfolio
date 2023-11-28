@@ -1,38 +1,26 @@
-// document.getElementById("carousel").addEventListener('wheel', function(event) {
-//   var modifier = 1;
-  
+gsap.registerPlugin(ScrollTrigger);
 
-//   if (event.deltaMode == event.DOM_DELTA_PIXEL) {
-//     modifier = 1;
-//   } else if (event.deltaMode == event.DOM_DELTA_LINE) {
-//     modifier = parseInt(getComputedStyle(this).lineHeight);
-//   } else if (event.deltaMode == event.DOM_DELTA_PAGE) {
-//     modifier = this.clientHeight;
-//   }
+let section = document.getElementById("carousel")
 
-//   if (isNaN(modifier)) {
-//     modifier = 10;
-//   }
+console.log("L'élément avec l'ID 'carousel' existe :", section);
 
-//   if (event.deltaY != 0) {
-//     this.scrollLeft += modifier * event.deltaY;
-//     event.preventDefault();
 
-//     // Vérifier si le défilement horizontal atteint les limites
-//     if (this.scrollLeft + this.clientWidth >= this.scrollWidth) {
-//       // Si oui, passer à la section suivante
-//       document.getElementById("Bottom").scrollIntoView({ behavior: 'smooth' });
-//     }
-//   }
-// });
+let sections = gsap.utils.toArray(section)
 
-// function handleHorizontalScroll(event) {
-//   event.preventDefault();
-// }
 
-// function handleVerticalScroll(event) {
-//   document.getElementById("Bottom").scrollIntoView({ behavior: 'smooth' });
-// }
+gsap.to(section,{
+  xPercent:-100 * (sections.length - 1),
+  ease:"none",
+  ScrollTrigger:{
+    trigger:".item",
+    pin: true,
+    scrub:1,
+    snap: 1/(sections.length - 1),
+    end:() => "+=" +
+    document.querySelector(".item").offsetWidth
+  }
+});
+
 
 //  Contenue a droite
 

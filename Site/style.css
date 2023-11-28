@@ -28,6 +28,7 @@ body {
   transition: mix-blend-mode 0.5s; /* Pour une transition en douceur */
   height: 100%;
   background-color: black;
+  overflow-x: hidden;
 }
 
 #overlay {

@@ -1,6 +1,7 @@
 AOS.init();
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
   const loaderWrapper = document.querySelector(".loader-wrapper");
   const preloaderCounters = document.querySelectorAll(".preloader_counter");
@@ -190,6 +191,7 @@ window.addEventListener('scroll', function() {
         window.scrollTo(0, 0);
     }
 });
+
 
 
 
