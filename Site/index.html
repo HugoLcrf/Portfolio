@@ -6,10 +6,9 @@
     <title>Portfolio Hugo Lecerf</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" defer></script>
+  <script src="carousel.js" defer></script>
   <script src="script.js" type="module" defer></script>
 
 
@@ -170,47 +169,49 @@
          </section>
   
          <div id="carousel">
-          <div class="item" onclick="showContent('content1')">
+          <div class="gsap">
+            <div class="item" onclick="showContent('content1')">
+                <div class="heading">
+                    <h1>Dataviz<span>2023</span> </h1>
+                </div>
+                    <img class="media" src="Img/DATAVIZ.png" alt="Slide 1">
+                <div class="tags">
+                    <p class="tag">HTML</p>
+                    <p class="tag">CSS</p>
+                    <p class="tag">JS / JSON</p>
+                </div>
+            </div>
+            <div class="item" onclick="showContent('content2')">
               <div class="heading">
-                  <h1>Dataviz<span>2023</span> </h1>
-              </div>
-                  <img class="media" src="Img/DATAVIZ.png" alt="Slide 1">
-              <div class="tags">
-                  <p class="tag">HTML</p>
-                  <p class="tag">CSS</p>
-                  <p class="tag">JS / JSON</p>
-              </div>
-          </div>
-          <div class="item" onclick="showContent('content2')">
-            <div class="heading">
-                  <h1>LesArdentes <span>2023</span></h1>
-              </div>
-              <img class="media" src="Img/LesArdentes.png" alt="Slide 2">
-              <div class="tags">
-                  <p class="tag">HTML</p>
-                  <p class="tag">CSS</p>
-                  <p class="tag">JS</p>
-                  <p class="tag">PHP</p>
-              </div>
-          </div>
-          <div class="item" onclick="showContent('content3')">
-              <div class="heading">
-                  <h1>PAUSE <span>2023</span></h1>
-              </div>
-              <img class="media" src="Img/PAUSE.png" alt="Slide 3">
-              <div class="tags">
-                  <p class="tag">WordPress</p>
-              </div>
-          </div>
-          <div class="item ViewAll">
-              <div class="heading">
-                  <h1></h1>
-              </div>
-              <div class="media">View All
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.4 18.3" style="enable-background:new 0 0 18.4 18.3;" xml:space="preserve"><style type="text/css">.arrow-1{fill:#FFFFFF;}</style><path class="arrow-1" d="M18.4,0H4.7l0,2.6h9.2L0.1,16.4l1.9,1.9L15.8,4.5v9.2l2.6,0V0z"></path></svg>
-              </div>
-      </div>
-  
+                    <h1>LesArdentes <span>2023</span></h1>
+                </div>
+                <img class="media" src="Img/LesArdentes.png" alt="Slide 2">
+                <div class="tags">
+                    <p class="tag">HTML</p>
+                    <p class="tag">CSS</p>
+                    <p class="tag">JS</p>
+                    <p class="tag">PHP</p>
+                </div>
+            </div>
+            <div class="item" onclick="showContent('content3')">
+                <div class="heading">
+                    <h1>PAUSE <span>2023</span></h1>
+                </div>
+                <img class="media" src="Img/PAUSE.png" alt="Slide 3">
+                <div class="tags">
+                    <p class="tag">WordPress</p>
+                </div>
+            </div>
+            <div class="item ViewAll">
+                <div class="heading">
+                    <h1></h1>
+                </div>
+                <div class="media">View All
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.4 18.3" style="enable-background:new 0 0 18.4 18.3;" xml:space="preserve"><style type="text/css">.arrow-1{fill:#FFFFFF;}</style><path class="arrow-1" d="M18.4,0H4.7l0,2.6h9.2L0.1,16.4l1.9,1.9L15.8,4.5v9.2l2.6,0V0z"></path></svg>
+                </div>
+                  </div>
+                </div>
+
       <div class="drawer-wrapper" id="drawer-wrapper">
           <div id="close" onclick="closeDrawer()">
               <svg viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -226,7 +227,7 @@
                       </div>
                       <div class="copy-wrapper">
                         <div class="copy">Dive into the statistics of world wars </div>
-                        <a class="work-link" href="work.html">View full case study</a>
+                        <a class="work-link" href="Dataviz.html">View full case study</a>
                       </div>
                       <div class="tile-wrapper">
                         <div class="tiles">
@@ -240,7 +241,7 @@
                             <img class="media" src="Img/DatavizCompteur.png" alt="">
                           </div>
                             </div>
-                            <a class="tile view-all work-link" href="">
+                            <a class="tile view-all work-link" href="Dataviz.html">
                               <p>View full<br> case study</p>
                             </a>
                           </div>
@@ -252,7 +253,7 @@
                       </div>
                       <div class="copy-wrapper">
                         <div class="copy">Come book your place on my first booking site</div>
-                        <a class="work-link" href="">View full case study</a>
+                        <a class="work-link" href="LesArdentes.html">View full case study</a>
                       </div>
                       <div class="tile-wrapper">
                         <div class="tiles">
@@ -266,7 +267,7 @@
                             <img class="media" src="Img/ArdentesACC.png" alt="">
                           </div>
                             </div>
-                            <a class="tile view-all work-link" href="">
+                            <a class="tile view-all work-link" href="LesArdentes.html">
                               <p>View full<br> case study</p>
                             </a>
                           </div>
@@ -278,7 +279,7 @@
                         </div>
                         <div class="copy-wrapper">
                           <div class="copy">Here is the citizen projects we created</div>
-                          <a class="work-link" href="">View full case study</a>
+                          <a class="work-link" href="Pause.html">View full case study</a>
                         </div>
                         <div class="tile-wrapper">
                           <div class="tiles">
@@ -292,15 +293,14 @@
                               <img class="media" src="Img/pauseAct.png" alt="">
                             </div>
                               </div>
-                              <a class="tile view-all work-link" href="">
+                              <a class="tile view-all work-link" href="Pause.html">
                                 <p>View full<br> case study</p>
                               </a>
                             </div>
                           </div>
                         </div>
                       </div>
-            
-              </div>
+              </div>  
   
       <section id="Bottom">
         <div class="displaytxt">
