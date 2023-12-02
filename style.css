@@ -115,7 +115,8 @@ body.difference {
 header {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  justify-content: space-between;
+  height: 100%;
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -431,10 +432,6 @@ header {
 
 .media-wrapper{
   height: 100%;
-}
-
-.media-wrapper .media{
-  height: 50vh;
   width: 100%;
   border-radius: 1vw;
 }
@@ -833,4 +830,77 @@ footer{
   font-size: 6vw;
   display: flex;
   font-family: "DAVINCI";
+}
+
+#project-content{
+  display: flex;
+  flex-direction: column;
+}
+
+#project-TXT{
+  padding-top: 4vh;
+  padding-bottom: 20vh;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#TXT-Left{
+  width: 50%;
+  font-size: 3rem;
+}
+
+#TXT-right{
+  display: flex;
+}
+
+#project-carre{
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+#project-middle{
+  margin: 0 auto;
+  min-width: 275px;
+  max-width: 79vw;
+}
+
+@media screen and ( max-width: 1000px){
+  #project-TXT{
+    padding-top: 4vh;
+    padding-bottom: 20vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #TXT-Left{
+    width: 100%;
+    font-size: 3rem;
+  }
+  
+  #TXT-right{
+    display: flex;
+  }
+}
+
+@media screen and ( max-width: 700px){
+  #project-TXT{
+    padding-top: 4vh;
+    padding-bottom: 10vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #TXT-Left{
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  #TXT-right{
+    display: flex;
+  }
 }
