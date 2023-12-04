@@ -120,21 +120,21 @@ window.addEventListener("scroll", function() {
   let st = window.pageYOffset || document.documentElement.scrollTop;
   const firstALink = document.querySelector("#top-nav a");
   const buttonNav = document.querySelector("#buttonNav");
-  const firstButton = document.querySelector("#bottom-nav button:first-child");
-  const secondButton = document.querySelector("#bottom-nav button:nth-child(2)");
+  // const firstButton = document.querySelector("#bottom-nav button:first-child");
+  // const secondButton = document.querySelector("#bottom-nav button:nth-child(2)");
 
   if (st > lastScrollTop) {
     //Défiler vers le bas
     firstALink.style.transform = "translateY(-110%) translateX(-50%)";
     buttonNav.style.transform = "translateY(-110%) translateX(100%)";
-    firstButton.style.transform = "translateY(110%) translateX(-150%)";
-    secondButton.style.transform = "translateY(160%) translateX(100%)";
+    // firstButton.style.transform = "translateY(110%) translateX(-150%)";
+    // secondButton.style.transform = "translateY(160%) translateX(100%)";
   } else {
     //Défiler vers le haut
     firstALink.style.transform = "translateY(0)";
     buttonNav.style.transform = "translateY(0)";
-    firstButton.style.transform = "translateY(0)";
-    secondButton.style.transform = "translateY(0)";
+    // firstButton.style.transform = "translateY(0)";
+    // secondButton.style.transform = "translateY(0)";
   }
 
   lastScrollTop = st <= 0 ? 0 : st;
@@ -169,16 +169,17 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
 
-// Récupérer le bouton et le corps du document
-const changeBlendModeButton = document.getElementById('changeBlendMode');
-const body = document.body;
+// // Récupérer le bouton et le corps du document  ANNULER PAS TRES UTILES ET PROBLEME DE Z INDEX SUR TOUS LE SITE
+// const changeBlendModeButton = document.getElementById('changeBlendMode');
+// const body = document.body;
 
-function toggleBlendMode() {
-  body.classList.toggle('difference');
-}
+// function toggleBlendMode() {
+//   body.classList.toggle('difference');
+// }
 
-// Ajouter un écouteur d'événements pour le clic sur le bouton
-changeBlendModeButton.addEventListener('click', toggleBlendMode);
+// // Ajouter un écouteur d'événements pour le clic sur le bouton
+// changeBlendModeButton.addEventListener('click', toggleBlendMode);
+
 
 
 //Deroulement infinit
