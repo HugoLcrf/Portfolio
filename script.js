@@ -75,7 +75,7 @@ var animateRotation = function() {
 //Affiche navbar
 var myButton = document.getElementById("buttonNav");
 var menu = document.getElementById("menu");
-var sectionsToHide = ["Homepage", "carousel", "TXT","Bottom","Boucle"];
+var sectionsToHide = ["Homepage", "carousel", "TXT","Bottom","Boucle","pin-spacer"];
 
 myButton.addEventListener("click", function() {
   targetRotation += 135; // Rotation cible à 60 degrés de plus
@@ -111,7 +111,6 @@ function showSections() {
     }
   });
 }
-
 
 //POSITIONNEMENT NAVBAR AVEC ANIMATION AU SCROLL
 let lastScrollTop = 0;
@@ -193,6 +192,8 @@ window.addEventListener('scroll', function() {
         window.scrollTo(0, 0);
     }
 });
+
+
 
 
 

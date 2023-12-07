@@ -15,8 +15,8 @@
     <header>
         <div id="nav">
           <div id="top-nav">
-            <a href="index.html" data-aos="down-right">Hugo <span class="emdash"></span>Lecerf</a>
-            <button data-aos="fade-down-left" id="buttonNav">
+            <a href="index.html" data-aos="down-right" alt="Accueil">Hugo <span class="emdash"></span>Lecerf</a>
+            <button data-aos="fade-down-left" id="buttonNav" alt="ButtonNavigation">
               <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28">
                 <g clip-path="url(#clip0_1_82)">
                   <path id="losange" fill-rule="evenodd" clip-rule="evenodd" d="M13.67 0.859863C13.67 13.8595 1.32847 14.1748 0.397461 14.1799C1.32987 14.1852 13.67 14.5014 13.67 27.4999C13.67 14.5014 26.0095 14.1852 26.942 14.1799C26.011 14.1748 13.67 13.8595 13.67 0.859863Z" fill="white"/>
@@ -29,10 +29,6 @@
             <li><a href="About.html">About</a></li>
             <li><a href="Contact.html">Contact</a></li>
           </ul>
-          <!-- <div id="bottom-nav">
-            <button data-aos="up-right">feur</button>
-            <button id="changeBlendMode" data-aos="up-left">Changer blend mode</button>
-          </div> -->
         </div>
       </header>
     
@@ -41,39 +37,39 @@
         <div id="header-work">
             <h1><strong>W</strong>ork</h1>
         </div>
-        <div id="content-work">
-            <div class="work-project" onclick="showContent('content1')">
+        <div id="content-work" >
+            <button class="work-project" onclick="showContent('content1')" tabindex="0" alt="Premiers Projets Dataviz">
                 <div class="heading">
-                    <h1>Dataviz<span>2023</span></h1>
+                    <h2>Dataviz<span>2023</span></h2>
                 </div>
-                    <img class="media" src="Img/DATAVIZ.png" alt="Slide 1">
+                    <img class="media" src="Img/DATAVIZ.png" alt="">
                 <div class="tags">
                     <p class="tag">HTML</p>
                     <p class="tag">CSS</p>
                     <p class="tag">JS / JSON</p>
                 </div>
-            </div>
-            <div class="work-project" onclick="showContent('content2')">
+            </button>
+            <button class="work-project" onclick="showContent('content2')" tabindex="0" alt="Second Projet ResaWeb">
               <div class="heading">
-                    <h1>LesArdentes<span>2023</span></h1>
-                </div>
-                <img class="media" src="Img/LesArdentes.png" alt="Slide 2">
+                    <h2>LesArdentes<span>2023</span></h2>
+                </div>  
+                <img class="media" src="Img/LesArdentes.png" alt="">
                 <div class="tags">
                     <p class="tag">HTML</p>
                     <p class="tag">CSS</p>
                     <p class="tag">JS</p>
                     <p class="tag">PHP</p>
                 </div>
-            </div>
-            <div class="work-project" onclick="showContent('content3')">
+            </button>
+            <button class="work-project" onclick="showContent('content3')" tabindex="" alt="Projet Citoyen">
                 <div class="heading">
-                    <h1>PAUSE<span>2023</span></h1>
+                    <h2>PAUSE<span>2023</span></h2>
                 </div>
-                <img class="media" src="Img/PAUSE.png" alt="Slide 3">
+                <img class="media" src="Img/PAUSE.png" alt="">
                 <div class="tags">
                     <p class="tag">WordPress</p>
                 </div>
-            </div>
+            </button>
         </div>
 
         <div class="drawer-wrapper" id="drawer-wrapper">
@@ -91,7 +87,7 @@
                         </div>
                         <div class="copy-wrapper">
                           <div class="copy">Dive into the statistics of world wars </div>
-                          <a class="work-link" href="Dataviz.html">View full case study</a>
+                          <a class="work-link" href="Dataviz.html" alt="En savoir plus">View full case study</a>
                         </div>
                         <div class="tile-wrapper">
                           <div class="tiles">
@@ -109,7 +105,7 @@
                               </video>                          
                             </div>
                               </div>
-                              <a class="tile view-all work-link" href="Dataviz.html">
+                              <a class="tile view-all work-link" href="Dataviz.html" alt="En savoir plus">
                                 <p>View full<br> case study</p>
                               </a>
                             </div>
@@ -121,24 +117,24 @@
                         </div>
                         <div class="copy-wrapper">
                           <div class="copy">Come book your place on my first booking site</div>
-                          <a class="work-link" href="LesArdentes.html">View full case study</a>
+                          <a class="work-link" href="LesArdentes.html" alt="En savoir plus">View full case study</a>
                         </div>
                         <div class="tile-wrapper">
                           <div class="tiles">
                             <div class="media-wrapper">
-                              <video class="media" preload muted loop autoplay playsinline>
+                              <video class="media" preload muted loop autoplay playsinline alt="" >
                                 <source src="Video/ArdentesResa.mp4">
                               </video>                            </div>
                             <div class="media-wrapper">
-                              <video class="media" preload muted loop autoplay playsinline>
+                              <video class="media" preload muted loop autoplay playsinline alt="">
                                 <source src="Video/ResawebLine.mp4">
                               </video>                            </div>
                             <div class="media-wrapper">
-                              <video class="media" preload muted loop autoplay playsinline>
+                              <video class="media" preload muted loop autoplay playsinline alt="">
                                 <source src="Video/ResawebAcc.mp4">
                               </video>                            </div>
                               </div>
-                              <a class="tile view-all work-link" href="LesArdentes.html">
+                              <a class="tile view-all work-link" href="LesArdentes.html" alt="En savoir plus">
                                 <p>View full<br> case study</p>
                               </a>
                             </div>
@@ -150,7 +146,7 @@
                               </div>
                               <div class="copy-wrapper">
                                 <div class="copy">Here is the citizen projects we created</div>
-                                <a class="work-link" href="Pause.html">View full case study</a>
+                                <a class="work-link" href="Pause.html" alt="En savoir plus">View full case study</a>
                               </div>
                               <div class="tile-wrapper">
                                 <div class="tiles">
@@ -168,7 +164,7 @@
                                     </video>   
                                   </div>
                                     </div>
-                                    <a class="tile view-all work-link" href="Pause.html">
+                                    <a class="tile view-all work-link" href="Pause.html" alt="En savoir plus">
                                       <p>View full<br> case study</p>
                                     </a>
                                   </div>

@@ -126,7 +126,7 @@
 
   <div id="video-container">
     <video id="background-video" autoplay loop muted>
-        <source src="Img/pexels-deconjon-15179376 (1440p).mp4" type="video/mp4">
+        <source src="Img/pexels-deconjon-15179376 (1440p).mp4" type="video/mp4" alt="">
       </video>
     </div>
   
@@ -134,7 +134,7 @@
       <div id="nav">
         <div id="top-nav">
           <a href="index.html" data-aos="down-right">Hugo <span class="emdash"></span>Lecerf</a>
-          <button data-aos="fade-down-left" id="buttonNav">
+          <button data-aos="fade-down-left" id="buttonNav" alt="ButtonNavigation">
             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28">
               <g clip-path="url(#clip0_1_82)">
                 <path id="losange" fill-rule="evenodd" clip-rule="evenodd" d="M13.67 0.859863C13.67 13.8595 1.32847 14.1748 0.397461 14.1799C1.32987 14.1852 13.67 14.5014 13.67 27.4999C13.67 14.5014 26.0095 14.1852 26.942 14.1799C26.011 14.1748 13.67 13.8595 13.67 0.859863Z" fill="white"/>
@@ -170,7 +170,7 @@
   
          <div id="carousel">
           <div class="gsap">
-            <div class="item" onclick="showContent('content1')">
+            <button alt="1er projet Visualisation de donner" class="item" onclick="showContent('content1')">
                 <div class="heading">
                     <h1>Dataviz<span>2023</span> </h1>
                 </div>
@@ -180,8 +180,8 @@
                     <p class="tag">CSS</p>
                     <p class="tag">JS / JSON</p>
                 </div>
-            </div>
-            <div class="item" onclick="showContent('content2')">
+            </button>
+            <button alt="Second Projet Resaweb" class="item" onclick="showContent('content2')">
               <div class="heading">
                     <h1>LesArdentes <span>2023</span></h1>
                 </div>
@@ -192,8 +192,8 @@
                     <p class="tag">JS</p>
                     <p class="tag">PHP</p>
                 </div>
-            </div>
-            <div class="item" onclick="showContent('content3')">
+            </button>
+            <button alt="3eme projet , Projet Citoyen" class="item" onclick="showContent('content3')">
                 <div class="heading">
                     <h1>PAUSE <span>2023</span></h1>
                 </div>
@@ -201,20 +201,20 @@
                 <div class="tags">
                     <p class="tag">WordPress</p>
                 </div>
-            </div>
+            </button>
       
-            <a href="work.html"class="item ViewAll">
+            <!-- <button href="work.html"class="item ViewAll">
                 <div class="heading">
                     <h1></h1>
                 </div>
                 <div class="media">View All
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.4 18.3" style="enable-background:new 0 0 18.4 18.3;" xml:space="preserve"><style type="text/css">.arrow-1{fill:#FFFFFF;}</style><path class="arrow-1" d="M18.4,0H4.7l0,2.6h9.2L0.1,16.4l1.9,1.9L15.8,4.5v9.2l2.6,0V0z"></path></svg>
                 </div>
-              </a>
-                </div>
+            </button> -->
+        </div>
 
       <div class="drawer-wrapper" id="drawer-wrapper">
-          <div id="close" onclick="closeDrawer()">
+          <div id="close" onclick="closeDrawer()" tabindex="0" alt="ClosePopUp">
               <svg viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path vector-effect="non-scaling-stroke" fill-rule="evenodd" clip-rule="evenodd"
                         d="M4.89263 5.46714C5.23798 5.8069 5.23798 6.36372 4.89263 6.70348L0.372703 11.1502C0.189372 11.3305 0.189372 11.6261 0.372703 11.8065C0.551847 11.9827 0.839231 11.9827 1.01838 11.8065L5.56921 7.32938C5.90668 6.99737 6.44806 6.99737 6.78553 7.32938L11.3373 11.8074C11.5164 11.9836 11.8038 11.9836 11.983 11.8074C12.1663 11.627 12.1663 11.3315 11.983 11.1511L7.46212 6.70349C7.11676 6.36372 7.11676 5.8069 7.46212 5.46714L12.2172 0.789098C12.4005 0.608738 12.4005 0.313152 12.2172 0.132792C12.0381 -0.0434502 11.7507 -0.0434501 11.5715 0.132792L6.78553 4.84125C6.44806 5.17325 5.90668 5.17325 5.56921 4.84125L0.784148 0.133708C0.605003 -0.042534 0.317619 -0.042534 0.138474 0.133708C-0.0448562 0.314068 -0.044856 0.609654 0.138475 0.790015L4.89263 5.46714Z"
