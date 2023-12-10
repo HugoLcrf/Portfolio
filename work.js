@@ -110,29 +110,25 @@ document.addEventListener('mousemove', (e) => {
   
   // // Ajouter un écouteur d'événements pour le clic sur le bouton
   // changeBlendModeButton.addEventListener('click', toggleBlendMode);
+  
 
+  //ASSOMBRIRE LA PAGE AU Scroll
 
-  //ABOUT PAGE //
+document.addEventListener("DOMContentLoaded", function () {
+  var overlay = document.getElementById("overlay");
 
-  let mail = document.getElementById("mail");
+  window.addEventListener("scroll", function () {
+    var scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 
-  mail.addEventListener('click', () => {
+    // Réglez le pourcentage de défilement à partir duquel l'overlay doit être activé
+    var activationThreshold = 20;
 
-    let tempTextarea = document.createElement('textarea');
-    // Assigner la valeur du texte que vous voulez copier
-    tempTextarea.value = "lecerf.hugo04@gmail.com";
-    // Ajouter l'élément au DOM
-    document.body.appendChild(tempTextarea);
-    // Sélectionner le texte dans l'élément
-    tempTextarea.select();
-    // Exécuter la commande de copie
-    document.execCommand('copy');
-    // Supprimer l'élément temporaire du DOM
-    document.body.removeChild(tempTextarea);
-    
-    // Mettre à jour le texte du lien
-    mail.innerText = "Email copied !";
-    setTimeout(() => {
-      mail.innerText = "Email";
-    }, 2000);
-  });  
+    if (scrollPercentage > activationThreshold) {
+      overlay.style.display = "block";
+      document.body.classList.add("overlay-active");
+    } else {
+      overlay.style.display = "none";
+      document.body.classList.remove("overlay-active");
+    }
+  });
+});

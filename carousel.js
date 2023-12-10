@@ -1,13 +1,16 @@
+
 gsap.registerPlugin(ScrollTrigger);
 
 let sections = gsap.utils.toArray("#carousel .item");
-
 sections.forEach((section, index) => {
   gsap.to(section, {
+    xPercent: -100,
     xPercent: 0,
     ease: "none",
     scrollTrigger: {
       trigger: section,
+      start: "top top",
+      end: () => "+=" + section.offsetWidth,
       start: "top",
       end: () => `+=${section.offsetWidth}`,
       pin: true,
@@ -15,7 +18,6 @@ sections.forEach((section, index) => {
     }
   });
 });
-
 // Animation du carrousel
 gsap.to("#carousel", {
   xPercent: -100 * (sections.length - 1), // Ajout pour couvrir tous les éléments du carrousel
