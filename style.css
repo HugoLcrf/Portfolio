@@ -194,6 +194,16 @@ button{
   animation: gelatine 0.5s ease;
 }
 
+@media screen and ( max-width: 767px){
+  #menu {
+    padding-left: 0;
+  }
+  #menu li {
+    padding: 10px;
+    font-size: 5rem;
+  }
+}
+
 @keyframes gelatine {
   from, to { transform: scale(1, 1); }
   25% { transform: scale(0.9, 1.1); }
@@ -393,6 +403,7 @@ button{
   background-color: white;
   color: black;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #close {
