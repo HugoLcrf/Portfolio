@@ -406,7 +406,7 @@ button{
   top: 0;
   right: 0;
   width: 0;
-  height: 100vh;
+  height: 90vh;
   transition: width 0.3s ease;
   position: fixed;
   background-color: white;
@@ -482,18 +482,19 @@ height: 25vw;
   z-index: 13 ;
 }
 
-@media screen and ( max-width: 767px){
-   .visible {
-    width: 90%;
-    height: 100vh;
-}
-}
+
 
 @media screen and ( max-width: 1024px){
   .visible {
-   width: 60%;
+   width: 70%;
    height: 100vh;
    z-index: 13;
+}
+}
+@media screen and ( max-width: 767px){
+  .visible {
+   width: 90%;
+   height: 100vh;
 }
 }
 

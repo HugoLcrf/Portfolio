@@ -28,7 +28,7 @@ sections.forEach((section, index) => {
 
 // Animation du carrousel
 gsap.to("#carousel", {
-  xPercent: -100 * (sections.length - 1),
+  xPercent: -240 * (sections.length - 1),
   ease: "none",
   scrollTrigger: {
     trigger: "#carousel",

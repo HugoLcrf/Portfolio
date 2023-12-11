@@ -192,6 +192,23 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Fonction pour ajuster la propriété right de .drawer-wrapper en fonction de la largeur de l'écran
+function adjustDrawerRight() {
+  const drawerWrapper = document.querySelector('.drawer-wrapper');
+  const screenWidth = window.innerWidth;
+
+  if (drawerWrapper) {
+    drawerWrapper.style.right = `-${screenWidth}px`;
+  }
+}
+
+// Appeler la fonction au chargement de la page
+document.addEventListener('DOMContentLoaded', adjustDrawerRight);
+
+// Appeler la fonction lorsqu'il y a un changement de taille d'écran
+window.addEventListener('resize', adjustDrawerRight);
+
+
 
 
 
