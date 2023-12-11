@@ -274,6 +274,13 @@ button{
     margin-left: 50px;
 }
 
+@media screen and ( max-width: 767px){
+  .display-txt{
+    font-size: 4rem;
+  }
+
+}
+
 .display-txt p{
   margin-bottom: 0;
 }
