@@ -345,6 +345,7 @@ button{
   position: relative;
 }
 
+
 .item::after {
   content: "";
   width: 1px;

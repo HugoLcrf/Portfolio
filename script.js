@@ -71,12 +71,12 @@ var animateRotation = function() {
   }
 };
 
-//Affiche navbar
+// Affiche navbar
 var myButton = document.getElementById("buttonNav");
 var menu = document.getElementById("menu");
-var sectionsToHide = ["Homepage", "carousel", "TXT","Bottom","Boucle","pin-spacer"];
+var sectionsToHide = ["Homepage", "carousel", "TXT", "Bottom", "Boucle", "pin-spacer"];
 
-myButton.addEventListener("click", function() {
+myButton.addEventListener("click", function () {
   targetRotation += 135; // Rotation cible à 60 degrés de plus
   animateRotation();
 
@@ -91,15 +91,23 @@ myButton.addEventListener("click", function() {
 });
 
 function hideSections() {
-  sectionsToHide.forEach(function(sectionId) {
-    var section = document.getElementById(sectionId);
-    if (section) {
-      section.style.display = "none";
-      section.classList.remove("fade-in-down");
-
+  sectionsToHide.forEach(function (sectionId) {
+    if (sectionId === "pin-spacer") {
+      var sections = document.getElementsByClassName(sectionId);
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+        sections[i].classList.remove("fade-in-down");
+      }
+    } else {
+      var section = document.getElementById(sectionId);
+      if (section) {
+        section.style.display = "none";
+        section.classList.remove("fade-in-down");
+      }
     }
   });
 }
+
 
 function showSections() {
   sectionsToHide.forEach(function(sectionId) {
@@ -110,6 +118,8 @@ function showSections() {
     }
   });
 }
+
+
 
 //POSITIONNEMENT NAVBAR AVEC ANIMATION AU SCROLL
 let lastScrollTop = 0;
