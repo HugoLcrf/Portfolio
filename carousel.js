@@ -1,34 +1,52 @@
-
 gsap.registerPlugin(ScrollTrigger);
 
 let sections = gsap.utils.toArray("#carousel .item");
+
 sections.forEach((section, index) => {
   gsap.to(section, {
-    xPercent: -100,
     xPercent: 0,
     ease: "none",
     scrollTrigger: {
       trigger: section,
       start: "top top",
-      end: () => "+=" + section.offsetWidth,
-      start: "top",
       end: () => `+=${section.offsetWidth}`,
       pin: true,
       scrub: 1,
-    }
+      onUpdate: (self) => {
+        // Ajouter overflow: visible lorsque l'animation commence
+        if (self.progress > 0) {
+          document.getElementById("carousel").style.overflow = "visible";
+        }
+      },
+      onLeaveBack: () => {
+        // Retirer overflow: visible lorsque l'animation se termine
+        document.getElementById("carousel").style.overflow = "";
+      },
+    },
   });
 });
+
 // Animation du carrousel
 gsap.to("#carousel", {
-  xPercent: -100 * (sections.length - 1), // Ajout pour couvrir tous les éléments du carrousel
+  xPercent: -100 * (sections.length - 1),
   ease: "none",
   scrollTrigger: {
-    trigger: "#carousel", // Utilisez le conteneur du carrousel comme déclencheur
+    trigger: "#carousel",
     start: "top-=10px",
-    end: () => `+=${sections[sections.length - 1].offsetWidth}`, // Utilise la largeur du dernier élément
+    end: () => `+=${sections[sections.length - 1].offsetWidth}`,
     pin: true,
     scrub: 1,
-  }
+    onUpdate: (self) => {
+      // Ajouter overflow: visible lorsque l'animation commence
+      if (self.progress > 0) {
+        document.getElementById("carousel").style.overflow = "visible";
+      }
+    },
+    onLeaveBack: () => {
+      // Retirer overflow: visible lorsque l'animation se termine
+      document.getElementById("carousel").style.overflow = "";
+    },
+  },
 });
 
 

@@ -304,6 +304,7 @@ button{
 
 /*Carousel*/
 
+
 .media{
   height: 75%;
   width: 100%;
@@ -315,6 +316,7 @@ button{
 #carousel {
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 
 .gsap{
