@@ -110,11 +110,19 @@ function hideSections() {
 
 
 function showSections() {
-  sectionsToHide.forEach(function(sectionId) {
-    var section = document.getElementById(sectionId);
-    if (section) {
-      section.style.display = "flex";
-      section.classList.add("fade-in-down");
+  sectionsToHide.forEach(function (sectionId) {
+    if (sectionId === "pin-spacer") {
+      var sections = document.getElementsByClassName(sectionId);
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "flex";
+        sections[i].classList.add("fade-in-down");
+      }
+    } else {
+      var section = document.getElementById(sectionId);
+      if (section) {
+        section.style.display = "flex";
+        section.classList.add("fade-in-down");
+      }
     }
   });
 }
