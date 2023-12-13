@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Durée approximative du chargement en millisecondes
   const loadingDuration = 3000;
 
-  const updateInterval = 30; // Intervalle de mise à jour du compteur (en millisecondes)
+  const updateInterval = 300; // Intervalle de mise à jour du compteur (en millisecondes)
 
   // Fonction pour mettre à jour le compteur
   const updateCounter = (counter, delay) => {
