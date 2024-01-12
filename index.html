@@ -7,9 +7,6 @@
     <link rel="icon" type="image/x-icon" href="Img/android-chrome-512x512-PhotoRoom.png-PhotoRoom.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" defer></script>
-  <script src="carousel.js" defer></script>
   <script src="script.js" type="module" defer></script>
 
 
@@ -170,7 +167,6 @@
          </section>
   
          <div id="carousel">
-          <div class="gsap">
             <button alt="1er projet Visualisation de donner" class="item" onclick="showContent('content1')">
                 <div class="heading">
                     <h1>Dataviz<span>2023</span> </h1>
@@ -204,15 +200,14 @@
                 </div>
             </button>
       
-            <!-- <button href="work.html"class="item ViewAll">
+            <a href="work.html"class="item ViewAll">
                 <div class="heading">
                     <h1></h1>
                 </div>
                 <div class="media">View All
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.4 18.3" style="enable-background:new 0 0 18.4 18.3;" xml:space="preserve"><style type="text/css">.arrow-1{fill:#FFFFFF;}</style><path class="arrow-1" d="M18.4,0H4.7l0,2.6h9.2L0.1,16.4l1.9,1.9L15.8,4.5v9.2l2.6,0V0z"></path></svg>
                 </div>
-            </button> -->
-                </div>
+              </a>
 
       <div class="drawer-wrapper" id="drawer-wrapper">
           <div id="close" onclick="closeDrawer()" tabindex="0" alt="ClosePopUp">
@@ -349,6 +344,7 @@
 
        <div id="overlay"></div>
 
+       <script src="carousel.js" defer></script>  
        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
        
 </body>

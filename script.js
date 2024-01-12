@@ -136,21 +136,17 @@ window.addEventListener("scroll", function() {
   let st = window.pageYOffset || document.documentElement.scrollTop;
   const firstALink = document.querySelector("#top-nav a");
   const buttonNav = document.querySelector("#buttonNav");
-  // const firstButton = document.querySelector("#bottom-nav button:first-child");
-  // const secondButton = document.querySelector("#bottom-nav button:nth-child(2)");
 
   if (st > lastScrollTop) {
     //Défiler vers le bas
     firstALink.style.transform = "translateY(-110%) translateX(-50%)";
     buttonNav.style.transform = "translateY(-110%) translateX(100%)";
-    // firstButton.style.transform = "translateY(110%) translateX(-150%)";
-    // secondButton.style.transform = "translateY(160%) translateX(100%)";
+
   } else {
     //Défiler vers le haut
     firstALink.style.transform = "translateY(0)";
     buttonNav.style.transform = "translateY(0)";
-    // firstButton.style.transform = "translateY(0)";
-    // secondButton.style.transform = "translateY(0)";
+
   }
 
   lastScrollTop = st <= 0 ? 0 : st;
@@ -209,22 +205,6 @@ window.addEventListener('scroll', function() {
         window.scrollTo(0, 0);
     }
 });
-
-// Fonction pour ajuster la propriété right de .drawer-wrapper en fonction de la largeur de l'écran
-function adjustDrawerRight() {
-  const drawerWrapper = document.querySelector('.drawer-wrapper');
-  const screenWidth = window.innerWidth;
-
-  if (drawerWrapper) {
-    drawerWrapper.style.right = `-${screenWidth}px`;
-  }
-}
-
-// Appeler la fonction au chargement de la page
-document.addEventListener('DOMContentLoaded', adjustDrawerRight);
-
-// Appeler la fonction lorsqu'il y a un changement de taille d'écran
-window.addEventListener('resize', adjustDrawerRight);
 
 
 

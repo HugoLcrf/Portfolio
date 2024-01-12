@@ -318,16 +318,14 @@ button{
   margin-bottom: 20px;
   border-radius: 15px;
   position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
 }
 
 #carousel {
   display: flex;
   width: 100%;
-  overflow: hidden;
-}
-
-.gsap{
-  display: flex;
+  overflow: auto;
 }
 
 .item {
@@ -406,7 +404,7 @@ button{
 .drawer-wrapper {
   top: 0;
   right: 0;
-  width: 0;
+  width: 0%;
   height: 90vh;
   transition: width 0.3s ease;
   position: fixed;
@@ -479,7 +477,7 @@ height: 25vw;
 
 .visible {
   width: 45%;
-  height: 100vh;
+  height: 100%;
   z-index: 13 ;
 }
 
@@ -488,14 +486,29 @@ height: 25vw;
 @media screen and ( max-width: 1024px){
   .visible {
    width: 70%;
-   height: 100vh;
    z-index: 13;
+}
+.item{
+  height: 58vh;
+  width: 70%;
+}
+
+.tag{
+  margin-top: 0;
+}
+
+.header-wrapper{
+  font-size: 2rem;
+
 }
 }
 @media screen and ( max-width: 767px){
   .visible {
    width: 90%;
-   height: 100vh;
+}
+
+.item{
+  width: 90%;
 }
 }
 
