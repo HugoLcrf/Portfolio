@@ -315,6 +315,7 @@ button{
 .media{
   height: 75%;
   width: 100%;
+  margin-bottom: 1vh;
   border-radius: 15px;
   position: relative;
   overflow: hidden;
@@ -646,6 +647,7 @@ footer{
   margin-right: 15px;
   margin-bottom: 30px; /* Ajout d'une marge en bas pour créer une nouvelle ligne */
   position: relative;
+  padding-bottom: 2vh;
 }
 
 .heading{
@@ -979,7 +981,7 @@ footer{
 
 #TXT-Left{
   width: 50%;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 #TXT-right{
@@ -1009,7 +1011,7 @@ footer{
   
   #TXT-Left{
     width: 100%;
-    font-size: 3rem;
+    font-size: 2rem;
   }
   
   #TXT-right{
