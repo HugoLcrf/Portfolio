@@ -274,9 +274,25 @@ button{
     margin-left: 50px;
 }
 
+#TXT p {
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: -.03em;
+  color: white;
+  width: 90%;
+}
+
 @media screen and ( max-width: 767px){
   .display-txt{
     font-size: 4rem;
+  }
+
+  #TXT p{
+    font-size: 2rem;
+  }
+
+  #Homepage{
+    height: auto;
   }
 
 }
@@ -301,13 +317,7 @@ button{
   margin: 100px 0px 230px 15px;
 }
 
-#TXT p {
-  font-size: 3.5rem;
-  line-height: 1;
-  letter-spacing: -.03em;
-  color: white;
-  width: 90%;
-}
+
 
 /*Carousel*/
 
